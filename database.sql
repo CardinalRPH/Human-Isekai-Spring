@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 24, 2024 at 11:39 PM
+-- Generation Time: Jul 25, 2024 at 08:24 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -65,6 +65,18 @@ CREATE TABLE `player` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `su`
+--
+
+CREATE TABLE `su` (
+  `userName` varchar(50) NOT NULL,
+  `superName` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `world`
 --
 
@@ -98,6 +110,12 @@ ALTER TABLE `player`
   ADD PRIMARY KEY (`playerId`),
   ADD KEY `Job Constrain` (`jobId`),
   ADD KEY `World Constarain` (`worldId`);
+
+--
+-- Indexes for table `su`
+--
+ALTER TABLE `su`
+  ADD PRIMARY KEY (`userName`);
 
 --
 -- Indexes for table `world`

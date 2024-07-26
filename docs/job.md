@@ -101,7 +101,7 @@ Response Body (Failure) :
 
 ## Delete Job
 
-Endpoint : PATCH /api/job
+Endpoint : DELETE /api/job
 
 Request Header :
 

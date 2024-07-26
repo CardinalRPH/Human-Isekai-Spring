@@ -104,7 +104,7 @@ Response Body (Failure) :
 
 ## Delete World
 
-Endpoint : PATCH /api/world
+Endpoint : DELETE /api/world
 
 Request Header :
 

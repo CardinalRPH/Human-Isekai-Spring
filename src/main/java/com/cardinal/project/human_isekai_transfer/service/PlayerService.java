@@ -4,6 +4,7 @@ import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.cardinal.project.human_isekai_transfer.entity.Player;
 import com.cardinal.project.human_isekai_transfer.model.RegisterPlayerRequest;
@@ -22,6 +23,7 @@ public class PlayerService {
     @Autowired
     private Validator validator;
 
+    @Transactional
     public void register(RegisterPlayerRequest request) {
         Set<ConstraintViolation<RegisterPlayerRequest>> constraintViolations = validator.validate(request);
         if(constraintViolations.size() != 0) {
